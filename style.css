@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+}
+
+
+
+.logo {
+  display: flex;
+  align-items: center; 
+  gap: 15px;
+}
+
+.logo-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;     
+  overflow: hidden;        
+  background-color: #eee;  
+}
+
+.logo-circle img {
+  width: 100%;             
+  height: 100%;            
+  object-fit: cover;       
+}
+/* ALL BUTTONS RED */
+button {
+    background: #8b0000;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: #ab9b9b;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: #ddd;
+}
+
+.navbar button {
+    width: 150px;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+    padding: 15px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 200px;
+    background: #e94f58;
+    padding: 10px;
+    border-radius: 10px;
+   
+}
+
+.sidebar h3 {
+    text-align: center;
+}
+
+.sidebar button {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.grid-box {
+    background: #ddd;
+    min-height: 250px;   /* instead of fixed height */
+    border-radius: 10px;
+    display: flex;  
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+/* RIGHT PANEL */
+.right {
+    width: 250px;
+}
+
+/* CARDS */
+.card-btn {
+    width: 100%;
+    height: 90px;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* QUICK FIX */
+.quick-fix {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-fix button {
+    flex: 1;
+    height: 100px;
+    font-size: 18px;
+}
+
+/* SEARCH */
+.search {
+    padding: 8px;
+    border-radius: 5px;
+    border: solid
+}
+
+/* DEFAULT SIZE */
+body {
+    font-size: 16px;
+    transition: font-size 0.3s ease;
+}
+
+/* MEDIUM */
+body.medium-text {
+    font-size: 18px;
+}
+
+/* LARGE */
+body.large-text {
+    font-size: 22px;
+}
+
+/* Make buttons, inputs, etc inherit smoothly */
+button, input, label, h1, h2, h3 {
+    font-size: inherit;
+    transition: all 0.3s ease;
+}
+    
+.weather-app {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    text-align:left;
+}
+
+.search-weather {
+    display:flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.search-weather input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.weather-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#temperature {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.weather-card img {
+    width: 70px;
+}
+.image-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    height: 585px;
+    width: 100%;
+}

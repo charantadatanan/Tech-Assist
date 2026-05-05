@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Setup - TechAssist</title>
+
+<link rel="stylesheet" href="emailstyle.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+
+    <div class="logo">
+        <div class="logo-circle"></div>
+        <h2>TechAssist</h2>
+    </div>
+
+    <div class="controls">
+        <span>TEXT SIZE:</span>
+        <button>Large</button>
+        <button>Medium</button>
+        <button>Small</button>
+        <button onclick="toggleLanguage()" id="langBtn">Filipino</button>
+    </div>
+
+    <input type="text" placeholder="Search help..." class="search">
+
+</div>
+
+    
+
+
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+   <a href="index.html"> <button id="index.html">HOME</button> </a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+    <h3 id="emailTypes">EMAIL TYPES</h3>
+
+    <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ec=GAlAFw&hl=en&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-1170425474%3A1777802889040006" class="side-link">Gmail</a>
+    <a href="https://login.yahoo.com/account/create" class="side-link">Yahoo Mail</a>
+    <a href="https://signup.live.com/signup?contextid=F3327F7FA1076009&opid=627FB71796AE9C49&bk=1777902833&sru=https://login.live.com/oauth20_authorize.srf%3fclient_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26contextid%3dF3327F7FA1076009%26opid%3d627FB71796AE9C49%26mkt%3dEN-PH%26lc%3d34313%26bk%3d1777902833%26uaid%3da290a2f619663ec1aa8c8c870a6d3195&lw=easi2&fl=1&uiflavor=web&fluent=2&client_id=00000000487A244A&lic=1&mkt=EN-PH&lc=34313&uaid=a290a2f619663ec1aa8c8c870a6d3195" class="side-link">Outlook</a>
+    
+</div>  
+
+    <!-- MAIN -->
+    <div class="main">
+        <h2 id="titleSetup">SET UP YOUR EMAIL</h2>
+       
+
+        <div class="grid-box">
+            Step-by-Step Guide Area
+            Gmail:
+        </div>  
+
+        <div class="image-container">
+    <img src="images/gmailtut.gif" alt="Guide Image">
+</div>
+
+        <h2>ENTER DETAILS:</h2>
+
+      
+
+        <h2>QUICK HELP:</h2>
+        <div class="quick-fix">
+            <button>Forgot Password</button>
+            <button>Can't Sign In</button>
+            <button>No Verification Code</button>
+            <button>Email Not Sending</button>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+   <div class="right">
+    <h2>TIPS:</h2>
+    
+    <p><strong>Use a Strong Password:</strong> 
+    Create a password that includes letters, numbers, and symbols. Avoid using birthdays or simple words.</p>
+
+    <p><strong>Enable Two-Factor Authentication:</strong> 
+    This adds an extra layer of security by sending a code to your phone or email when you log in.</p>
+
+    <p><strong>Avoid Spam Emails:</strong> 
+    Do not open emails from unknown senders. Never click suspicious links or download attachments you don’t trust.</p>
+</div>
+
+</div>
+
+
+
+<script>
+// SELECT TEXT SIZE BUTTONS
+const sizeButtons = document.querySelectorAll(".header button");
+
+sizeButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        let size;
+
+        if (btn.textContent === "Large") {
+            size = "22px";
+        } else if (btn.textContent === "Medium") {
+            size = "18px";
+        } else {
+            size = "14px";
+        }
+
+        // Apply to whole page
+        document.body.style.fontSize = size;
+
+        // Apply to ALL buttons
+        document.querySelectorAll("button").forEach(b => {
+            b.style.fontSize = size;
+        });
+
+        // Apply to inputs
+        document.querySelectorAll("input").forEach(input => {
+            input.style.fontSize = size;
+        });
+
+        // Apply to headings
+        document.querySelectorAll("h1, h2, h3").forEach(h => {
+            h.style.fontSize = size;
+        });
+
+        // Apply to labels
+        document.querySelectorAll("label").forEach(label => {
+            label.style.fontSize = size;
+        });
+    });
+});
+let isFilipino = false;
+
+function toggleLanguage() {
+
+    if (!isFilipino) {
+        // Filipino
+        document.getElementById("homeBtn").textContent = "PANGUNAHING PAHINA";
+        document.getElementById("titleSetup").textContent = "I-SET UP ANG IYONG EMAIL";
+        document.getElementById("titleDetails").textContent = "ILAGAY ANG DETALYE";
+        document.getElementById("titleHelp").textContent = "MABILISANG TULONG";
+        document.getElementById("emailTypes").textContent = "MGA URI NG EMAIL";
+        document.getElementById("titleDetails2").textContent = "ILAGAY ANG DETALYE:";
+        document.getElementById("titleHelp2").textContent = "MABILISANG TULONG:";
+
+        document.getElementById("langBtn").textContent = "English";
+
+        isFilipino = true;
+
+    } else {
+        // English
+        document.getElementById("homeBtn").textContent = "HOME";
+        document.getElementById("titleSetup").textContent = "SET UP YOUR EMAIL";
+        document.getElementById("titleDetails").textContent = "ENTER DETAILS:";
+        document.getElementById("titleHelp").textContent = "QUICK HELP:";
+        document.getElementById("emailTypes").textContent = "EMAIL TYPES";
+        document.getElementById("titleDetails2").textContent = "ENTER DETAILS:";
+        document.getElementById("titleHelp2").textContent = "QUICK HELP:";
+
+        document.getElementById("langBtn").textContent = "Filipino";
+
+        isFilipino = false;
+    }
+}
+</script>   
+
+</body>
+</html>

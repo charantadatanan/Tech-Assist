@@ -1,0 +1,109 @@
+/* General Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    color: #80180b;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 3px solid #80180b;
+}
+
+header h1 {
+    color: #80180b;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Quick Exit Button */
+.exit-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: #80180b; /* Solid Red Block */
+    color: #ffffff;            /* White text */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #80180b;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.exit-btn:hover {
+    background-color: #ffffff; /* White hover */
+    color: #80180b;            /* Red text */
+}
+
+/* Grid System */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Cards */
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.emergency-card {
+    border-top: 5px solid #80180b;
+}
+
+.card h2 {
+    color: #80180b;
+    margin-top: 0;
+}
+
+/* Links & Buttons */
+.phone-link {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #80180b;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #80180b; /* Solid Red Block */
+    color: white;
+    border: 2px solid #80180b;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #80180b; /* White hover */
+    color: #ffffff;            /* Red text */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+    font-size: 0.9rem;
+}

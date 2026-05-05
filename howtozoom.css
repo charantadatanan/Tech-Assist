@@ -1,0 +1,102 @@
+/* General Setup */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Header Section */
+header {
+    background-color: #80180b; /* Solid Red Block */
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Content Area */
+.zoom-content {
+    background: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+}
+
+h2 {
+    color: #80180b;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+/* Shortcut Keys Styling */
+kbd {
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    color: #333;
+    display: inline-block;
+    font-size: 0.85em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
+}
+
+.guide-list {
+    list-style: none;
+    padding: 0;
+}
+
+.guide-list li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #fff8f7;
+    border-left: 4px solid #80180b;
+}
+
+/* The Red Button with White Hover */
+.btn-home {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #80180b;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #80180b;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-home:hover {
+    background-color: white;
+    color: #80180b;
+}
+
+button {
+    background: #8b0000;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.text-size {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;
+    gap: 10px; /* space between buttons */
+    margin: 15px 0;
+}

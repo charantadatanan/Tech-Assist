@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>No Sound Fix</title>
+    <link rel="stylesheet" href="nosound.css">
+</head>
+<body>
+
+    
+<div class="text-size">
+    TEXT SIZE:
+    <button>Large</button>
+    <button>Medium</button>
+    <button>Small</button>
+</div>
+    
+
+<div class="header">
+    <a href="index.html" class="back-btn">⬅</a>
+    <h1>Audio Diagnostic</h1>
+    <p>Let’s check what’s causing the sound issue</p>
+</div>
+
+<div class="sound-check">
+    <p>Sound Level</p>
+    <div class="bar">
+        <div class="level"></div>
+    </div>
+    <button onclick="testSound()">▶ Test Sound</button>
+</div>
+
+<div class="container">
+
+    <div class="checklist">
+
+        <div class="check-item">
+            <input type="checkbox">
+            <label>Volume is not muted</label>
+        </div>
+
+        <div class="check-item">
+            <input type="checkbox">
+            <label>Volume level is high enough</label>
+        </div>
+
+        <div class="check-item">
+            <input type="checkbox">
+            <label>Headphones/speakers connected</label>
+        </div>
+
+        <div class="check-item">
+            <input type="checkbox">
+            <label>Correct audio device selected</label>
+        </div>
+
+        <div class="check-item">
+            <input type="checkbox">
+            <label>Device restarted</label>
+        </div>
+
+    </div>
+
+    <div class="action-panel">
+        <h3>Quick Actions</h3>
+
+        <button>Open Sound Settings</button>
+        <button>Reconnect Device</button>
+
+        <div class="status">
+            <p>Status:</p>
+            <span id="status-text">Not Checked</span>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    © 2026 Help Center
+</div>
+
+<script>
+function testSound() {
+    alert("Playing test sound...");
+}
+</script>
+
+<script>
+
+// FUNCTION FOR PAGE REDIRECTION
+function goToPage(page) {
+    window.location.href = page;
+}
+
+// TEXT SIZE BUTTONS
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        if (btn.textContent === "Large") {
+            document.body.style.fontSize = "20px";
+        } else if (btn.textContent === "Medium") {
+            document.body.style.fontSize = "16px";
+        } else {
+            document.body.style.fontSize = "12px";
+        }
+    });
+}); 
+
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("collapsed");
+}
+
+</script>
+
+</body>
+</html>

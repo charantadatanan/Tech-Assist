@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Zoom - Support</title>
+    <link rel="stylesheet" href="howtozoom.css">
+</head>
+<body>
+
+    <div class="text-size">
+    TEXT SIZE:
+    <button>Large</button>
+    <button>Medium</button>
+    <button>Small</button>
+</div>
+    
+
+    <div class="container">
+        <header>
+            <h1>Accessibility Guide</h1>
+            <p>Learn how to adjust the view of this website.</p>
+        </header>
+
+        <div class="zoom-content">
+            <h2>Keyboard Shortcuts</h2>
+            <p>You can use your browser's built-in zoom features to make text larger or smaller:</p>
+            
+            <ul class="guide-list">
+                <li><strong>Zoom In:</strong> Press <kbd>Ctrl</kbd> + <kbd>+</kbd> (Windows) or <kbd>Cmd</kbd> + <kbd>+</kbd> (Mac)</li>
+                <li><strong>Zoom Out:</strong> Press <kbd>Ctrl</kbd> + <kbd>-</kbd> (Windows) or <kbd>Cmd</kbd> + <kbd>-</kbd> (Mac)</li>
+                <li><strong>Reset to 100%:</strong> Press <kbd>Ctrl</kbd> + <kbd>0</kbd> (Windows) or <kbd>Cmd</kbd> + <kbd>0</kbd> (Mac)</li>
+            </ul>
+
+            <h2>Mouse Controls</h2>
+            <p>Hold the <kbd>Ctrl</kbd> or <kbd>Cmd</kbd> key and scroll your <strong>mouse wheel</strong> up or down to zoom.</p>
+
+            <div style="text-align: center;">
+                <a href="index.html" class="btn-home">RETURN TO HOME</a>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+
+// FUNCTION FOR PAGE REDIRECTION
+function goToPage(page) {
+    window.location.href = page;
+}
+
+// TEXT SIZE BUTTONS
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        if (btn.textContent === "Large") {
+            document.body.style.fontSize = "20px";
+        } else if (btn.textContent === "Medium") {
+            document.body.style.fontSize = "16px";
+        } else {
+            document.body.style.fontSize = "12px";
+        }
+    });
+}); 
+
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("collapsed");
+}
+
+</script>
+
+</body>
+</html>

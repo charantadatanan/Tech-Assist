@@ -1,0 +1,121 @@
+.btn-red-block {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #80180b; 
+    color: #ffffff;            
+    text-decoration: none;    
+    border: 2px solid #80180b; 
+    border-radius: 5px;        
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease; 
+    cursor: pointer;
+    width: 200px; 
+    height: 50px; 
+    text-size: 16px; 
+    text-align: center;
+    line-height: 50px; 
+}
+
+.btn-red-block:hover {
+    background-color: #ffffff; 
+    color: #80180b;            
+ 
+    border: 2px solid #80180b;
+}
+
+.btn-red-outline:hover {
+    background-color: #80180b;
+    color: white;
+}
+.guide-header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.guide-header h1 {
+    color: #a6071a; 
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.guide-header p {
+    color: #a6071a;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.guide-item {
+    text-align: center;
+}
+
+.image-box {
+    width: 260px;
+    height: 260px;
+    background: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+
+.guide-icon::after {
+    content: "📱"; 
+    font-size: 50px;
+}
+
+.guide-item h3 {
+    color: #a6071a;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.guide-item p {
+    color: #a6071a;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+hr.divider {
+    border: 0;
+    border-top: 1px solid #a6071a;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+
+img {
+    width: 100%;
+    height: 70%;
+    border-radius: 8px;
+}
+
+.back-link-border {
+    display: inline-block;
+    padding: 10px 25px;
+    color: #80180b;          
+    text-decoration: none;     
+    border: 2px solid #80180b; 
+    border-radius: 5px;        
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+
+.back-link-border:hover {
+    background-color: #80180b;
+    color: #ffffff;
+}
