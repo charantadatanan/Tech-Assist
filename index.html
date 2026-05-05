@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechAssist UI</title>
+
+<!-- LINK EXTERNAL CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="logo">
+        <div class="logo-circle">
+            <img src="https://scontent.fmnl4-3.fna.fbcdn.net/v/t1.15752-9/688035670_1305865734835450_8039049880582618061_n.png?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHk2nvQdebrEBqSf49uqatpf9a-2i7PbId_1r7aLs9sh3ORvjNLCmC47blJ_VhFZG7ipHpa-lzOmfze77_OHhcz&_nc_ohc=9UEfTn2CvAcQ7kNvwHQQe85&_nc_oc=AdqH_4o8o15oX4v4WxvDF-k0dOzkdt9cTqpLOu01z_bfR6zRjfH7HTAe2FvVG06XHeEp5P_HNHaT0Ce2twhscGcc&_nc_zt=23&_nc_ht=scontent.fmnl4-3.fna&_nc_ss=7b2a8&oh=03_Q7cD5QH_Fmo9zGYhRiEO6j-V_hpCzZQAlrEyTJr2GZfZVCv5ZQ&oe=6A20CA0D" alt="Logo">
+        </div>
+        <h2>Tech-Assist</h2>
+    </div>
+
+    <div>
+        TEXT SIZE:
+        <button>Large</button>
+        <button>Medium</button>
+        <button>Small</button>
+    </div>
+
+    <input type="text" placeholder="Search..." class="search">
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <button onclick="goToPage('home.html')">HOME</button>
+
+    <button onclick="goToPage('gettingstarted.html')">
+        GETTING STARTED
+    </button>
+
+    <button onclick="goToPage('guides.html')">
+        HOW-TO GUIDES
+    </button>
+
+    <button onclick="goToPage('problems.html')">
+        COMMON PROBLEMS
+    </button>
+
+       
+
+    <button onclick="goToPage('autochat.html')">
+        AUTO-CHAT
+    </button>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h3>EXPLORE BY CATEGORY</h3>
+
+        <button onclick="goToPage('phones.html')">
+            1. PHONES
+        </button>
+
+        <button onclick="goToPage('safety.html')">
+            2. SAFETY
+        </button>
+
+        <button onclick="goToPage('setupemail.html')">
+            3. EMAIL
+        </button>
+        
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+        <h2>MAIN PAGE</h2>
+<div class="image-box">
+<img src="https://scontent.fmnl4-7.fna.fbcdn.net/v/t1.15752-9/689343410_1793938571582459_1365429346036617378_n.png?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeF3ntDRWozfDAVl5vXj2muHgauFKFyyweGBq4UoXLLB4YSdZf3yQcwtt8qDvTRipPFxJ33JUICJBHcuy2PQM_wn&_nc_ohc=XisR0YDomS0Q7kNvwFsiUtG&_nc_oc=Adp6PT5ikBhA1WnyPCGu40uRXD79AKGA3GRut0JV17_ky0g9mCPGmMjlnCnJjqsrB48-wUnWpTmq_XE1oY-YzkMC&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&_nc_ss=7b2a8&oh=03_Q7cD5QHnX1FhdXqQNSS4HbeYk8HmckPWHmlWI7lw357MP2t-aQ&oe=6A20E3D6" alt="Main Page Image">
+</div>  
+
+       
+        <h2>QUICK FIXES:</h2>
+        <div class="quick-fix">
+
+            <button onclick="goToPage('MyPasswordIsGone.html')">
+                MY PASSWORD IS GONE
+            </button>
+
+            <button onclick="goToPage('nosound.html')">
+                NO SOUND
+            </button>
+
+            <button onclick="goToPage('findphotos.html')">
+                HOW DO I FIND PHOTOS?
+            </button>
+
+            <button onclick="goToPage('WhatIsThisApp.html')">
+                WHAT IS THIS APP?
+            </button>
+            <button onclick="goToPage('weather.html')">
+                WEATHER
+            </button>
+
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+        <h2>POPULAR GUIDES:</h2>
+
+        <button class="card-btn"
+        onclick="goToPage('howtozoom.html')">
+            HOW TO ZOOM
+        </button>
+
+       
+
+        <button class="card-btn"
+        onclick="goToPage('setupemail.html')">
+            SET UP EMAIL
+        </button>
+
+          <div class="weather-app">
+
+        <div class="search-weather">
+            <input type="text" id="cityInput" placeholder="Enter city...">
+            <button onclick="getWeather()">Search</button>
+        </div>
+
+        <div class="weather-card">
+            <h3 id="cityName">--</h3>
+            <p id="temperature">--°C</p>
+            <p id="condition">--</p>
+            <img id="weatherIcon" src="">
+        </div>
+        
+
+    </div>
+
+</div>
+
+</div>
+
+<script>
+
+// FUNCTION FOR PAGE REDIRECTION
+function goToPage(page) {
+    window.location.href = page;
+}
+
+// TEXT SIZE BUTTONS
+const buttons = document.querySelectorAll(".header button");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        if (btn.textContent === "Large") {
+            document.body.style.fontSize = "20px";
+        } else if (btn.textContent === "Medium") {
+            document.body.style.fontSize = "16px";
+        } else {
+            document.body.style.fontSize = "12px";
+        }
+    });
+}); 
+
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("collapsed");
+}
+
+
+const API_KEY = "931f146f1939c8bb2b348d000967674d";
+
+// AUTO LOAD WEATHER
+window.onload = () => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(pos => {
+            getWeatherByCoords(pos.coords.latitude, pos.coords.longitude);
+        });
+    }
+};
+
+// FETCH USING COORDS (WITH PROXY FIX)
+function getWeatherByCoords(lat, lon) {
+    const url = `http://api.weatherstack.com/current?access_key=${API_KEY}&query=${lat},${lon}`;
+
+    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`)
+        .then(res => res.json())
+        .then(data => {
+            const weather = JSON.parse(data.contents);
+            updateUI(weather);
+        });
+}
+
+// SEARCH
+function getWeather() {
+    const city = document.getElementById("cityInput").value;
+    const url = `http://api.weatherstack.com/current?access_key=${API_KEY}&query=${city}`;
+
+    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`)
+        .then(res => res.json())
+        .then(data => {
+            const weather = JSON.parse(data.contents);
+            updateUI(weather);
+        });
+}
+
+// UPDATE UI
+function updateUI(data) {
+    if (data.error) return alert("Location not found!");
+
+    document.getElementById("cityName").innerText = data.location.name;
+    document.getElementById("temperature").innerText = data.current.temperature + "°C";
+    document.getElementById("condition").innerText = data.current.weather_descriptions[0];
+    document.getElementById("weatherIcon").src = data.current.weather_icons[0];
+}
+
+</script>
+
+</body>
+</html>
